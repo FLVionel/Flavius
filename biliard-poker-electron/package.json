@@ -1,0 +1,43 @@
+{
+  "name": "biliard-poker",
+  "version": "1.0.0",
+  "description": "Biliard Poker — Turneu & Ligă Master",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-win": "electron-builder --win --x64",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "ro.biliardpoker.app",
+    "productName": "Biliard Poker",
+    "copyright": "Biliard Poker v28",
+    "files": [
+      "main.js",
+      "app.html"
+    ],
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }],
+      "artifactName": "BiliardPoker-Setup-${version}.exe"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "mac": {
+      "target": "dmg",
+      "artifactName": "BiliardPoker-${version}.dmg"
+    },
+    "linux": {
+      "target": "AppImage",
+      "artifactName": "BiliardPoker-${version}.AppImage"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
+  }
+}
