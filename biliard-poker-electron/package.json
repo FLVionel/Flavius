@@ -13,11 +13,14 @@
     "appId": "ro.biliardpoker.app",
     "productName": "Biliard Poker",
     "copyright": "Biliard Poker v28",
+    "icon": "icon.ico",
     "files": [
       "main.js",
-      "app.html"
+      "app.html",
+      "icon.ico"
     ],
     "win": {
+      "icon": "icon.ico",
       "target": [{ "target": "nsis", "arch": ["x64"] }],
       "artifactName": "BiliardPoker-Setup-${version}.exe"
     },
